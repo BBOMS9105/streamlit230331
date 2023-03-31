@@ -13,16 +13,16 @@ def run_eda2_app():
     # 데이터셋 불러오기
     iris_df = pd.read_csv('data/iris.csv')
     # st.dataframe(iris_df)
-
+    
     # 메뉴 지정
     submenu = st.sidebar.selectbox("submenu", ['기술통계량', '그래프'])
     if submenu == "기술통계량":
         st.dataframe(iris_df)
-
+        
         with st.expander("Species"):
-            A = st.selectbox('Select Species', ['Setosa', 'Versicolor', 'Verginica'])
-            tmp_df = iris_df[iris_df['species'] == A] 
-            st.dataframe(tmp_df.head()) 
+            A = st.selectbox('Select Species', ['Iris-setosa', 'Iris-versicolor', 'Iris-virginica'])
+            tmp_df = iris_df.loc[iris_df.species == A]
+            st.table(tmp_df.head())
             #st.dataframe(result)
             
         with st.expander("기술 통계량"):
