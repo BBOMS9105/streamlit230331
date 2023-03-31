@@ -56,4 +56,4 @@ def run_ml_app():
             st.write(pred_proba_scores)
             st.image('https://upload.wikimedia.org/wikipedia/commons/thumb/2/27/Blue_Flag%2C_Ottawa.jpg/220px-Blue_Flag%2C_Ottawa.jpg')
         else:
-            st.image('data\iris.jpg')
+            st.warning('AAAA')

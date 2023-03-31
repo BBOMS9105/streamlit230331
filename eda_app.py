@@ -6,7 +6,7 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import plotly.express as px
 import seaborn as sns
-
+from PIL import Image
 def run_eda_app():
     st.subheader("탐색적 자료 분석 페이지")
 
