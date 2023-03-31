@@ -11,9 +11,7 @@ def main():
     choice = st.sidebar.selectbox("메뉴", menu)
 
     if choice == "Home":
-        img = Image.open('data\iris.jpg')
         st.subheader("Home")
-        st.image(img)
     elif choice == "탐색적 자료 분석":
         run_eda_app()
     elif choice == "머신러닝":
